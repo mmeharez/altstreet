@@ -2,12 +2,6 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="theme-color" content="#C6F806">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Altstreet">
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ALTSTREET — Mercado Privado</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,63 +122,6 @@ body{background:var(--bg);color:var(--t);font-family:var(--ui);-webkit-font-smoo
 .btn-signup{background:var(--lime);border:1px solid var(--lime);color:#000;font-family:var(--ui);font-weight:800;font-size:13px;height:34px;padding:0 17px;border-radius:9px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center}
 .btn-signup:hover{filter:brightness(1.1)}
 
-
-/* ─ TIPO DE ATIVO ─ */
-.c-tipo{font-family:var(--mono);font-size:9px;color:var(--faint);letter-spacing:.05em;text-transform:uppercase;margin-top:2px}
-.tipo-pill{display:inline-block;background:var(--s2);border:1px solid var(--line2);border-radius:5px;font-family:var(--mono);font-size:10px;font-weight:600;padding:2px 9px;letter-spacing:.06em;color:var(--lime)}
-.panel-tabs{display:flex;border-bottom:1px solid var(--line);padding:0 24px;margin-top:16px}
-.ptab{background:none;border:none;border-bottom:2px solid transparent;color:var(--dim);font-family:var(--ui);font-weight:600;font-size:12.5px;padding:9px 12px;cursor:pointer;transition:.14s;margin-bottom:-1px;white-space:nowrap}
-.ptab:hover{color:var(--t)}
-.ptab.on{color:var(--t);border-bottom-color:var(--lime)}
-.ps{padding:0}
-
-/* ─ LEAD CAPTURE ─ */
-.lead-step{padding:20px 0 8px}
-.lead-step h3{font-family:var(--display);font-size:21px;font-weight:500;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2}
-.lead-field{width:100%;background:var(--s2);border:1px solid var(--line2);color:var(--t);font-family:var(--ui);font-size:14px;padding:12px 14px;border-radius:9px;outline:none;transition:.15s;display:block;margin-bottom:9px}
-.lead-field:focus{border-color:var(--lime)}
-.lead-field::placeholder{color:var(--faint)}
-.lead-note{color:var(--faint);font-size:12px;line-height:1.55;margin:12px 0 16px;font-style:italic}
-.lead-submit{width:100%;background:var(--lime);border:none;color:#000;font-weight:800;font-size:14px;padding:13px;border-radius:9px;cursor:pointer;transition:.15s;margin-bottom:8px}
-.lead-submit:hover{filter:brightness(1.08)}
-.lead-cancel{width:100%;background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--ui);font-weight:600;font-size:13px;padding:11px;border-radius:9px;cursor:pointer;transition:.15s}
-.lead-cancel:hover{border-color:var(--dim);color:var(--t)}
-.lead-summary{background:var(--s1);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:16px}
-.lead-summary .ls-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--line)}
-.lead-summary .ls-row:last-child{border:none}
-.lead-summary .ls-row .k{color:var(--faint)}
-.lead-summary .ls-row .v{font-weight:700;font-family:var(--mono);font-size:12px}
-
-/* ─ EMPTY STATE ─ */
-.empty-state{display:none;flex-direction:column;align-items:center;justify-content:center;padding:80px 24px;text-align:center;gap:10px;min-height:340px}
-.empty-state.on{display:flex}
-.es-mark{width:72px;height:72px;background:var(--lime-a);border:1px solid rgba(198,248,6,.2);border-radius:20px;display:grid;place-items:center;margin-bottom:8px}
-.empty-state h3{font-family:var(--display);font-size:30px;font-weight:500;letter-spacing:-.025em;line-height:1.1}
-.empty-state h3 em{font-style:italic;color:var(--lime)}
-.empty-state p{color:var(--dim);font-size:15px;max-width:38ch;line-height:1.58;margin-bottom:4px}
-.es-cta{background:var(--lime);border:none;color:#000;font-family:var(--ui);font-weight:800;font-size:14px;padding:13px 28px;border-radius:10px;cursor:pointer;transition:.15s;margin-top:8px}
-.es-cta:hover{filter:brightness(1.08)}
-.es-ghost{background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--ui);font-weight:600;font-size:13px;padding:11px 22px;border-radius:10px;cursor:pointer;transition:.15s;margin-top:6px}
-.es-ghost:hover{border-color:var(--dim);color:var(--t)}
-
-/* ─ WISHLIST / BOOKMARK ─ */
-.c-bookmark{position:absolute;top:13px;right:13px;width:28px;height:28px;border-radius:7px;background:rgba(0,0,0,.5);border:1px solid var(--line);display:grid;place-items:center;cursor:pointer;transition:.18s;z-index:2;opacity:0}
-.card:hover .c-bookmark,.c-bookmark.saved{opacity:1}
-.c-bookmark svg{width:14px;height:14px;stroke:var(--dim);fill:none;stroke-linecap:round;stroke-linejoin:round;transition:.15s}
-.c-bookmark.saved svg{stroke:var(--lime);fill:var(--lime)}
-.c-bookmark:hover{border-color:var(--lime);background:var(--lime-b)}
-.c-bookmark:hover svg{stroke:var(--lime)}
-.card{position:relative}
-
-/* Wishlist count badge */
-.wl-badge{display:none;background:var(--lime);color:#000;font-size:9px;font-weight:800;font-family:var(--mono);padding:1px 5px;border-radius:10px;margin-left:4px}
-.wl-badge.has{display:inline}
-
-/* Wishlist empty state */
-.wl-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 24px;text-align:center;gap:10px;color:var(--dim)}
-.wl-empty svg{opacity:.2;margin-bottom:8px}
-.wl-empty h3{font-family:var(--display);font-size:26px;font-weight:500;letter-spacing:-.02em;color:var(--t)}
-.wl-empty p{font-size:14px;max-width:36ch;line-height:1.55;margin-bottom:8px}
 /* ─── TICKER ─── */
 .ticker{border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;font-size:12px;background:rgba(255,255,255,.015)}
 .ticker-in{display:inline-flex;gap:36px;padding:9px 24px;animation:scroll 40s linear infinite}
@@ -416,9 +353,8 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:0;background:var
 .ft-disc{border-top:1px solid var(--line);padding:20px 0 32px}
 .ft-disc p{color:var(--faint);font-size:11px;line-height:1.6}
 
-@media(max-width:900px){.grid,.steps{grid-template-columns:1fr 1fr}.research-grid{grid-template-columns:1fr 1fr}.mini-row,.pf-top{grid-template-columns:1fr}.tb-nav{display:none}.ft-cols{grid-template-columns:repeat(2,1fr)}.tb-search-bar{max-width:260px}.btn-login,.btn-signup{display:none}}
-@media(max-width:640px){.tb-search-bar{display:none}.role-toggle{display:none}.kyc-ind{display:none!important}.brand{font-size:18px}.brand .mark{width:28px;height:28px;border-radius:6px}.tb-in{padding:10px 16px;gap:10px}}
-@media(max-width:560px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.research-grid{grid-template-columns:1fr}.gate-opts{grid-template-columns:1fr}.ft-cols{grid-template-columns:1fr 1fr}.ft-brand{width:100%}.hero{padding:48px 0 20px}.panel{width:100vw;border-left:none}.panel-head,.panel-body{padding:18px 18px}.mini-row{gap:20px}}
+@media(max-width:900px){.grid,.steps{grid-template-columns:1fr 1fr}.research-grid{grid-template-columns:1fr 1fr}.mini-row,.pf-top{grid-template-columns:1fr}nav{display:none}.ft-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.research-grid{grid-template-columns:1fr}.gate-opts{grid-template-columns:1fr}.ft-cols{grid-template-columns:1fr 1fr}.ft-brand{width:100%}}
 </style>
 </head>
 <body>
@@ -526,10 +462,6 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:0;background:var
         </div>
         <!-- Conta -->
         <div class="bm-sect">
-          <button class="bm-item" onclick="closeBurger();openSearch()">Buscar ativos</button>
-          <button class="bm-item" onclick="closeBurger();openGate()">Log in / Sign up</button>
-        </div>
-          <button class="bm-item" onclick="closeBurger();show('wishlist')">Minha Lista <span class="wl-badge" id="burgerWlBadge"></span></button>
           <button class="bm-item" onclick="closeBurger();show('portfolio')">Carteira<span class="bm-tag ok" id="bmKycTag" style="display:none">OK</span></button>
           <button class="bm-item" onclick="closeBurger();toggleKyc()">KYC — Verificação<span class="bm-tag pend" id="bmKycStatus">Pendente</span></button>
           <button class="bm-item" onclick="closeBurger();toast('Perfil completo disponível após login.')">Meu perfil</button>
@@ -562,7 +494,6 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:0;background:var
   <button data-v="research">Research</button>
   <button data-v="portfolio">Carteira</button>
   <button data-v="how">Como funciona</button>
-  <button data-v="wishlist">Lista <span class="wl-badge" id="navWlBadge"></span></button>
 </div></div>
 </div>
 
@@ -642,22 +573,6 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:0;background:var
 <!-- ═══ CARTEIRA ═══ -->
 <section class="view" id="v-portfolio">
 <div class="wrap pad">
-
-  <!-- Empty state for visitors -->
-  <div class="empty-state" id="pfEmpty">
-    <div class="es-mark">
-      <svg viewBox="0 0 100 100" fill="var(--lime)" stroke="var(--lime)" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" width="36" height="36">
-        <path d="M19 80 L38 24 L56 24 L37 80 Z"/>
-        <path d="M69 52 L81 80 L57 80 Z"/>
-      </svg>
-    </div>
-    <h3>Sua carteira<br>começa <em>aqui</em></h3>
-    <p>Crie uma conta para acompanhar suas posições, receber alertas de liquidez e acessar o mercado secundário.</p>
-    <button class="es-cta" onclick="openGate()">Criar conta →</button>
-    <button class="es-ghost" onclick="show('home')">Explorar ativos</button>
-  </div>
-  <!-- Portfolio content -->
-  <div id="pfContent">
   <div class="section-head"><div><h2>Sua carteira</h2><p class="sub">Marcado pela última referência de valuation. Demonstração.</p></div></div>
   <div class="pf-top">
     <div class="pf-card"><div class="l">Valor de mercado</div><div class="n">R$ 612.500</div><div class="d" style="color:var(--up)">+R$ 287.500 · +88,5%</div></div>
@@ -668,7 +583,6 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:0;background:var
     <thead><tr><th>Ativo</th><th class="r">Aporte</th><th class="r">Entrada</th><th class="r">Marcação</th><th class="r">Mark-to-market</th><th class="r">Resultado</th></tr></thead>
     <tbody id="pfBody"></tbody>
   </table></div></div>
-</div><!-- /pfContent -->
 </div>
 </section>
 
@@ -712,19 +626,6 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:0;background:var
   <p>O IDA varia por ativo e ao longo do tempo, conforme novas rodadas são fechadas e os preços dos CRs se ajustam no mercado. <b>Não é uma garantia de retorno</b> — é um indicador de posicionamento relativo de preço no momento da análise.</p>
   <p style="color:var(--faint);font-size:13px">Dados calculados com base em valuations públicos da última rodada e nos preços de referência praticados no mercado secundário. Fins exclusivamente informativos. Valuations e CRs sujeitos a alteração.</p>
 </div>
-</div>
-</section>
-
-<!-- ═══ MINHA LISTA ═══ -->
-<section class="view" id="v-wishlist">
-<div class="wrap pad">
-  <div class="section-head">
-    <div>
-      <h2>Minha Lista</h2>
-      <p class="sub">Ativos que você salvou. Clique em qualquer card para ver detalhes ou manifestar interesse.</p>
-    </div>
-  </div>
-  <div id="wishlistGrid"></div>
 </div>
 </section>
 
@@ -816,90 +717,44 @@ footer{border-top:1px solid var(--line);margin-top:80px;padding:0;background:var
 </footer>
 
 <script>
-
-// ─── WISHLIST (declarado no topo p/ disponibilidade imediata) ───
-let wishlist = [];
-try { wishlist = JSON.parse(localStorage.getItem('alt_wishlist') || '[]'); } catch(e) { wishlist = []; }
-
-function toggleWishlist(id, e) {
-  if(e) e.stopPropagation();
-  const idx = wishlist.indexOf(id);
-  if(idx > -1) wishlist.splice(idx, 1);
-  else wishlist.push(id);
-  try { localStorage.setItem('alt_wishlist', JSON.stringify(wishlist)); } catch(err) {}
-  updateWlBadge();
-  if(typeof renderGrid === 'function') renderGrid();
-  renderWishlistGrid();
-  const a = (typeof get === 'function') ? get(id) : null;
-  toast(idx > -1
-    ? (a ? a.name + ' removido da lista.' : 'Removido da lista.')
-    : (a ? a.name + ' salvo na lista.' : 'Salvo na lista.'));
-}
-
-function updateWlBadge() {
-  const n = wishlist.length;
-  ['navWlBadge','burgerWlBadge'].forEach(id => {
-    const el = document.getElementById(id);
-    if(!el) return;
-    el.textContent = n || '';
-    el.classList.toggle('has', n > 0);
-  });
-}
-
-function renderWishlistGrid() {
-  const el = document.getElementById('wishlistGrid');
-  if(!el || typeof A === 'undefined') return;
-  const saved = A.filter(a => wishlist.includes(a.id));
-  if(!saved.length) {
-    el.innerHTML = '<div class="wl-empty">' +
-      '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>' +
-      '<h3>Lista vazia</h3>' +
-      '<p>Salve ativos clicando no marcador em cada card.</p>' +
-      '<button class="es-cta" onclick="show(\'home\')">Explorar ativos &rarr;</button>' +
-      '</div>';
-  } else {
-    el.innerHTML = '<div class="grid">' + saved.map(cardHTML).join('') + '</div>';
-  }
-}
-
 const fmt=n=>n.toLocaleString('pt-BR');
 
 const A=[
-  {id:'anthropic',mono:'AN',tk:'ANTHon',name:'Anthropic',ida:-18.2,cat:'IA',sub:'Frontier AI · Claude',
+  {id:'anthropic',mono:'AN',tk:'ANTHon',name:'Anthropic',cat:'IA',sub:'Frontier AI · Claude',
    val:'US$ 965 bi',entry:'US$ 380 bi (fev/26)',delta:153.9,status:'live',sl:'IPO Protocolado',min:'R$ 10.000',
    spark:[14,17,21,28,36,48,60,72,84,93,100],
    horizon:'IPO confidencial protocolado — listagem possível 2º sem/26',
    thesis:'Série H US$65bi a US$965bi (mai/26) — ultrapassou OpenAI. Receita run-rate ~US$47bi. IPO mais aguardado de 2026.',
-   struct:'CR Sênior · Securitizadora parceira · Custódia Vórtx',tipo:'CR'},
-  {id:'openai',mono:'OA',tk:'OPAIon',name:'OpenAI',ida:-12.4,cat:'IA',sub:'Gen AI · ChatGPT',
+   struct:'CR Sênior · Securitizadora parceira · Custódia Vórtx'},
+  {id:'openai',mono:'OA',tk:'OPAIon',name:'OpenAI',cat:'IA',sub:'Gen AI · ChatGPT',
    val:'US$ 852 bi',entry:'US$ 500 bi (out/25)',delta:70.4,status:'open',sl:'Aberto',min:'R$ 10.000',
    spark:[42,44,46,52,60,65,73,85,83,92,100],
    horizon:'IPO esperado em 2026',
    thesis:'Maior fundraise privado da história: US$122bi (mar/26). Receita ~US$2bi/mês e crescendo 4x mais rápido que Google e Meta.',
-   struct:'CR Sênior · Securitizadora parceira · Custódia Vórtx',tipo:'CR'},
-  {id:'spacex',mono:'SX',tk:'SPCXon',name:'SpaceX',ida:-5.8,cat:'Espaço',sub:'Espaço · Satélite · xAI',
+   struct:'CR Sênior · Securitizadora parceira · Custódia Vórtx'},
+  {id:'spacex',mono:'SX',tk:'SPCXon',name:'SpaceX',cat:'Espaço',sub:'Espaço · Satélite · xAI',
    val:'US$ 1,77 tri',entry:'US$ 800 bi (dez/25)',delta:121.0,status:'live',sl:'IPO 12/jun',min:'R$ 25.000',
    spark:[30,35,42,54,58,70,76,82,93,98,100],
    horizon:'IPO confirmado · 12 jun 2026 · Nasdaq',
    thesis:'Preço fixo US$135/ação — US$1,77tri pós-IPO, 7ª maior dos EUA. Evento de liquidez iminente.',
-   struct:'CR Sênior · Conversão em ação listada no IPO · Custódia Vórtx',tipo:'CR'},
-  {id:'kalshi',mono:'KL',tk:'KLSHon',name:'Kalshi',ida:-28.4,cat:'Fintech',sub:'Prediction Markets',
+   struct:'CR Sênior · Conversão em ação listada no IPO · Custódia Vórtx'},
+  {id:'kalshi',mono:'KL',tk:'KLSHon',name:'Kalshi',cat:'Fintech',sub:'Prediction Markets',
    val:'US$ 22 bi',entry:'US$ 11 bi (dez/25)',delta:100.0,status:'open',sl:'Aberto',min:'R$ 5.000',
    spark:[20,22,24,29,32,40,50,64,80,93,100],
    horizon:'Sem IPO anunciado · horizonte 2–3 anos',
    thesis:'Dobrou em 5 meses (Série F, mai/26, Coatue). Receita ~US$1,5bi, volume US$10bi/mês.',
-   struct:'CR Sênior · Securitizadora parceira · Custódia Vórtx',tipo:'CR'},
-  {id:'figure',mono:'FI',tk:'FIGRon',name:'Figure AI',ida:-41.6,cat:'Robótica',sub:'Robótica Humanoide',
+   struct:'CR Sênior · Securitizadora parceira · Custódia Vórtx'},
+  {id:'figure',mono:'FI',tk:'FIGRon',name:'Figure AI',cat:'Robótica',sub:'Robótica Humanoide',
    val:'US$ 39 bi',entry:'US$ 39 bi (set/25)',delta:0,status:'soon',sl:'Em breve',min:'R$ 25.000',
    spark:[8,11,16,24,30,44,58,74,89,96,100],
    horizon:'IPO window 2027–2028',
    thesis:'15x em 18 meses (Série C, set/25). Helix + BotQ: 1 robô a cada 90 min, meta 100 mil/4 anos.',
-   struct:'Equity direto · Lock-up de cap table · Custódia Vórtx',tipo:'Equity'},
-  {id:'prometheus',mono:'PR',tk:'PRMETon',name:'Project Prometheus',ida:null,cat:'Exclusivo',sub:'Hurst Capital · Acesso restrito',
+   struct:'CR Sênior · Lock-up de cap table · Custódia Vórtx'},
+  {id:'prometheus',mono:'PR',tk:'PRMETon',name:'Project Prometheus',cat:'Exclusivo',sub:'Hurst Capital · Acesso restrito',
    val:'Sob consulta',entry:'—',delta:null,status:'excl',sl:'Exclusivo',min:'Sob consulta',
    spark:null,horizon:'Confidencial · disponível sob elegibilidade',
    thesis:'Estrutura proprietária Hurst Capital. Deal exclusivo com acesso restrito. Detalhes disponíveis após verificação de elegibilidade junto à mesa.',
-   struct:'Estrutura confidencial · Mesa Hurst Capital',tipo:'Fundo'},
+   struct:'Estrutura confidencial · Mesa Hurst Capital'},
 ];
 
 const BOOKS={
@@ -939,22 +794,6 @@ function applyRole(){
   const sb=document.getElementById('secBtn');if(sb)sb.textContent=s?'Anunciar posição':'Ver compradores';
 }
 
-
-function idaTxt(a){
-  if(a.ida===null||a.ida===undefined)return'<span style="color:var(--gold)">Restrito</span>';
-  const col=a.ida<0?'var(--up)':'var(--dn)';
-  const sign=a.ida<0?'':'+'
-  return'<span style="color:'+col+';font-weight:700">IDA '+sign+a.ida.toFixed(1)+'%</span>';
-}
-function horizonShort(a){
-  const h=a.horizon||'';
-  if(h.includes('12 jun')||h.includes('12/jun')) return'IPO 12/jun';
-  if(h.includes('2026')) return'Liquidez 2026';
-  if(h.includes('2027')) return'2027–28';
-  if(h.includes('2–3')) return'2–3 anos';
-  if(h.includes('Confidencial')) return'Sob consulta';
-  return'';
-}
 function dColor(d){if(d===null)return'var(--gold)';return d>0?'var(--up)':(d<0?'var(--dn)':'var(--dim)');}
 function dTxt(d){
   if(d===null)return`<span style="color:var(--gold)">Restrito</span>`;
@@ -976,7 +815,7 @@ function cardHTML(a){
   const col=dColor(a.delta),excl=a.id==='prometheus';
   const priceEl=excl
     ?`<div class="c-price"><div class="locked">●●● ●●</div><div class="delta" style="color:var(--gold)">Dados restritos</div></div>`
-    :`<div class="c-price"><div class="big">${a.val}</div><div class="delta">${idaTxt(a)}<span style="color:var(--faint);font-weight:500;font-size:10.5px;margin-left:6px">${horizonShort(a)}</span></div></div>`;
+    :`<div class="c-price"><div class="big">${a.val}</div><div class="delta">${dTxt(a.delta)}<span style="color:var(--faint);font-weight:600;font-size:11.5px"> vs. entrada</span></div></div>`;
   const sparkEl=excl
     ?`<div class="c-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>`
     :sparkSVG(a.spark,col);
@@ -984,10 +823,9 @@ function cardHTML(a){
     ?`<div class="c-meta"><span>Hurst Exclusive</span><button class="req-btn" onclick="event.stopPropagation();openPanel('prometheus')">Solicitar acesso</button></div>`
     :`<div class="c-meta"><span>Ticket mín. <b>${a.min}</b></span><span>${a.cat}</span></div>`;
   return`<div class="card${excl?' excl':''}" onclick="openPanel('${a.id}')">
-    <button class="c-bookmark ${wishlist.includes(a.id)?'saved':''}" onclick="toggleWishlist('${a.id}',event)" title="Salvar na lista"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></button>
     <div class="c-top">
       <div class="mb" style="${excl?'color:var(--gold);border-color:rgba(212,168,83,.3)':''}">${a.mono}</div>
-      <div><div class="c-name">${a.name}</div><div class="c-tk">${a.tk}</div><div class="c-tipo">${a.id==='prometheus'?'•••':(a.tipo||'')}</div></div>
+      <div><div class="c-name">${a.name}</div><div class="c-tk">${a.tk}</div></div>
       <div class="pill ${a.status}">${a.sl}</div>
     </div>${priceEl}${sparkEl}${metaEl}
   </div>`;
@@ -1024,7 +862,7 @@ function miniItem(a){
 }
 const byDelta=[...A].filter(a=>a.delta!==null).sort((a,b)=>b.delta-a.delta);
 document.getElementById('miniRow').innerHTML=`
-  <div class="mini"><h3>Em alta <span class="tag">IDA</span></h3>${byDelta.slice(0,3).map(miniItem).join('')}</div>
+  <div class="mini"><h3>Em alta <span class="tag">vs. entrada</span></h3>${byDelta.slice(0,3).map(miniItem).join('')}</div>
   <div class="mini"><h3>Em destaque <span class="tag">volume</span></h3>${[get('openai'),get('anthropic'),get('kalshi')].map(miniItem).join('')}</div>
   <div class="mini"><h3>Liquidez à vista <span class="tag">IPO</span></h3>${[get('spacex'),get('anthropic'),get('openai')].map(miniItem).join('')}</div>`;
 
@@ -1037,16 +875,7 @@ function show(v){
   const el=document.getElementById('v-'+v);
   if(el){el.classList.add('on');}
   document.querySelectorAll('.tb-nav-in button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
-  if(v==='portfolio') renderPortfolioState();
-  if(v==='wishlist') renderWishlistGrid();
   window.scrollTo({top:0,behavior:'smooth'});
-}
-function renderPortfolioState(){
-  const empty=document.getElementById('pfEmpty');
-  const content=document.getElementById('pfContent');
-  const isVisitor=(role==='visitante'||role==='');
-  if(empty) empty.classList.toggle('on',isVisitor);
-  if(content) content.style.display=isVisitor?'none':'block';
 }
 
 function toggleBurger(){
@@ -1109,8 +938,8 @@ function openPanel(id,asSell){
       '<div style="display:flex;gap:26px;margin-top:16px">'+
       '<div><div style="color:var(--faint);font-size:11px">Marcação</div>'+
       '<div class="mono" style="font-size:22px;font-weight:700;margin-top:3px">'+(excl?'●●● ●●':a.val)+'</div></div>'+
-      (a.ida!==null&&a.ida!==undefined?'<div><div style="color:var(--faint);font-size:11px">IDA</div>'+
-      '<div style="font-size:18px;font-weight:700;margin-top:7px">'+idaTxt(a)+'</div></div>':'')+
+      (a.delta!==null?'<div><div style="color:var(--faint);font-size:11px">vs. entrada</div>'+
+      '<div style="font-size:18px;font-weight:700;margin-top:7px">'+dTxt(a.delta)+'</div></div>':'')+
       '</div>';
     var body=excl
       ?'<div class="lock-msg">'+
@@ -1119,12 +948,7 @@ function openPanel(id,asSell){
         '<p>'+a.thesis+'</p>'+
         '<p style="margin-top:12px;color:var(--faint);font-size:12.5px">'+a.struct+'</p>'+
         '<button class="req" onclick="toast(\'Solicitação enviada — a mesa Hurst entrará em contato em 24h.\');closePanel()">Solicitar elegibilidade à mesa Hurst</button></div>'
-      :'<div class="panel-tabs">'+
-        '<button class="ptab on" onclick="switchPanelTab(\'ov\',this)">Visão Geral</button>'+
-        '<button class="ptab" onclick="switchPanelTab(\'est\',this)">Estrutura</button>'+
-        '</div>'+
-        '<div id="ps-ov" class="ps">'+
-        sparkSVG(a.spark,col,80)+
+      :sparkSVG(a.spark,col,80)+
         '<p style="color:var(--dim);font-size:13.5px;line-height:1.58;margin:18px 0 4px">'+a.thesis+'</p>'+
         '<div style="margin-top:14px">'+
         '<div class="p-row"><span class="k">Entrada do CR</span><span class="v mono">'+a.entry+'</span></div>'+
@@ -1134,10 +958,6 @@ function openPanel(id,asSell){
         '<div style="margin-top:20px;font-size:10.5px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase;font-weight:700">Documentos</div>'+
         '<div class="doc"><span class="ic">PDF</span>Lâmina do CR — '+a.name+'</div>'+
         '<div class="doc"><span class="ic">PDF</span>Termo de Securitização</div>'+
-        '<button onclick="toggleWishlist(\''+id+'\')" style="margin-top:12px;width:100%;background:none;border:1px solid var(--line2);color:var(--dim);font-family:var(--ui);font-weight:600;font-size:12.5px;padding:10px;border-radius:9px;cursor:pointer;transition:.15s;display:flex;align-items:center;justify-content:center;gap:8px" onmouseover="this.style.borderColor=\'var(--lime)\';this.style.color=\'var(--lime)\'" onmouseout="this.style.borderColor=\'var(--line2)\';this.style.color=\'var(--dim)\'">'+
-        '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>'+
-        (wishlist.includes(id)?'Remover da lista':'Salvar na lista')+
-        '</button>'+
         '<div class="ticket">'+
         '<div class="seg">'+
         '<button id="sBuy" class="'+(sell?'':'on')+'" onclick="setSeg(false)">Comprar</button>'+
@@ -1147,28 +967,13 @@ function openPanel(id,asSell){
         '<input id="amt" type="text" inputmode="numeric" value="50.000" oninput="recalc()">'+
         '<div class="calc"><span>Exposição implícita</span><b id="exp">—</b></div>'+
         '<div class="calc" style="margin-top:8px;padding-top:0;border:none"><span id="feeLbl">Taxa</span><b id="fee">—</b></div>'+
-        '<button class="submit" id="tSubmit" onclick="confirmOrder(\''+a.name+'\')"></button></div>'+
-        '</div>'+
-        '<div id="ps-est" class="ps" style="display:none;padding:20px 0 4px">'+
-        '<div style="padding:0 24px">'+
-        '<div class="p-row"><span class="k">Tipo de ativo</span><span class="v"><span class="tipo-pill">'+(a.tipo||'—')+'</span></span></div>'+
-        a.struct.split(" · ").map(function(s){return '<div class="p-row" style="border:none;padding:7px 0 0"><span class="v" style="font-size:12px;color:var(--dim)">'+ s +'</span></div>';}).join("")+
-        '<div class="p-row" style="margin-top:8px"><span class="k">Horizonte</span><span class="v" style="font-size:12px">'+a.horizon+'</span></div>'+
-        '<div class="p-row"><span class="k">Ticket mínimo</span><span class="v mono">'+a.min+'</span></div>'+
-        '</div></div>';
+        '<button class="submit" id="tSubmit" onclick="confirmOrder(\''+a.name+'\')"></button></div>';
     document.getElementById('panelBody').innerHTML=body;
     if(!excl){window._sell=sell;setSeg(sell);}
   }catch(e){
     document.getElementById('panelBody').innerHTML=
       '<p style="padding:24px;color:var(--dim);font-size:14px">Erro ao carregar ativo.<br>'+e.message+'</p>';
   }
-}
-function switchPanelTab(tab,el){
-  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('on'));
-  el.classList.add('on');
-  var ov=document.getElementById('ps-ov'),est=document.getElementById('ps-est');
-  if(ov) ov.style.display=tab==='ov'?'':'none';
-  if(est) est.style.display=tab==='est'?'':'none';
 }
 function setSeg(sell){
   window._sell=sell;
@@ -1181,36 +986,7 @@ function setSeg(sell){
 }
 function recalc(){const el=document.getElementById('amt');if(!el)return;const v=parseInt((el.value||'').replace(/\D/g,'')||0);el.value=v?fmt(v):'';document.getElementById('exp').textContent='~ US$ '+fmt(Math.round(v/5.4));document.getElementById('fee').textContent='R$ '+fmt(Math.round(v*(window._sell?.01:.02)));}
 function closePanel(){document.getElementById('overlay').classList.remove('on');document.getElementById('panel').classList.remove('on');}
-function confirmOrder(n){
-  const amt=document.getElementById('amt')?.value||'—';
-  const op=window._sell?'Venda':'Compra';
-  document.getElementById('panelBody').innerHTML=
-    '<div class="lead-step">'+
-    '<h3>Confirmar interesse</h3>'+
-    '<div class="lead-summary">'+
-    '<div class="ls-row"><span class="k">Ativo</span><span class="v">'+n+'</span></div>'+
-    '<div class="ls-row"><span class="k">Operação</span><span class="v">'+op+'</span></div>'+
-    '<div class="ls-row"><span class="k">Valor</span><span class="v">R$ '+amt+'</span></div>'+
-    '</div>'+
-    '<input id="leadEmail" class="lead-field" type="email" placeholder="Seu e-mail *" autocomplete="email">'+
-    '<input id="leadWA" class="lead-field" type="tel" placeholder="WhatsApp (opcional)">'+
-    '<p class="lead-note">A mesa Hurst entrará em contato em até 24h para confirmar sua intenção de '+op.toLowerCase()+'. Seus dados são protegidos e não serão compartilhados.</p>'+
-    '<button class="lead-submit" onclick="submitLead(\''+n+'\',\''+amt+'\',\''+op+'\')">Confirmar intenção →</button>'+
-    '<button class="lead-cancel" onclick="closePanel()">Cancelar</button>'+
-    '</div>';
-}
-function submitLead(n,amt,op){
-  const email=document.getElementById('leadEmail')?.value||'';
-  if(!email||!email.includes('@')){toast('Insira um e-mail válido.');return;}
-  const wa=document.getElementById('leadWA')?.value||'';
-  try{
-    const leads=JSON.parse(localStorage.getItem('alt_leads')||'[]');
-    leads.push({ativo:n,valor:amt,op,email,wa,ts:new Date().toISOString()});
-    localStorage.setItem('alt_leads',JSON.stringify(leads));
-  }catch(e){}
-  closePanel();
-  toast(op==='Compra'?'Reserva registrada — a mesa Hurst entrará em contato em até 24h.':'Intenção de venda registrada — buscaremos contraparte.');
-}
+function confirmOrder(n){closePanel();toast(window._sell?`Venda anunciada — ${n}. A mesa buscará casamento.`:`Reserva enviada — ${n}. Card de confirmação em breve.`);}
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');clearTimeout(window._tt);window._tt=setTimeout(()=>t.classList.remove('on'),4000);}
 let _searchOpen=false,_searchIdx=-1;
 function openSearch(){
@@ -1259,13 +1035,6 @@ document.addEventListener('keydown',e=>{
   if(e.key==='/'&&!_searchOpen&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.activeElement.isContentEditable){e.preventDefault();openSearch();}
 });
 applyRole();
-
-// ─── PWA Service Worker ───────────────────────────
-if('serviceWorker' in navigator){
-  window.addEventListener('load',()=>{
-    navigator.serviceWorker.register('sw.js').catch(()=>{});
-  });
-}
 </script>
 </body>
 </html>
