@@ -1259,7 +1259,7 @@ const BOOKS={
 const get=id=>A.find(a=>a.id===id);
 let role='investidor',curCat='Todos',curBook='spacex',kycOk=false;
 
-function enter(r){role=r;document.getElementById('gate').classList.add('hide');document.getElementById('kycBtn').style.display='flex';if(r!=='visitante') document.getElementById('burgerWrap').style.display='block';if(r!=='visitante'){const n=document.getElementById('bmName');if(n)n.textContent=r==='investidor'?'Investidor':'Vendedor';}applyRole();}
+function enter(r){role=r;document.getElementById('gate').classList.add('hide');document.getElementById('kycBtn').style.display='flex';const bw=document.getElementById('burgerWrap');if(r!=='visitante'){bw.style.display='block';const n=document.getElementById('bmName');if(n)n.textContent=r==='investidor'?'Investidor':'Vendedor';}else{bw.style.display='none';}applyRole();}
 function openGate(){document.getElementById('gate').classList.remove('hide');}
 function setRoleMode(r){role=r;applyRole();}
 function toggleSell(){setRoleMode(role==='vendedor'?'investidor':'vendedor');}
@@ -1605,7 +1605,51 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){if(_searchOpen)closeSearch();else closePanel();}
   if(e.key==='/'&&!_searchOpen&&!['INPUT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.activeElement.isContentEditable){e.preventDefault();openSearch();}
 });
+
+// ─── TOOLS ────────────────────────────────────────
+let tpType='compra';
+function calcCurrency(){
+  const raw=(document.getElementById('tcAmt')?.value||'0').replace(/\./g,'').replace(',','.');
+  const amt=parseFloat(raw)||0;
+  const from=document.getElementById('tcFrom')?.value||'BRL';
+  const to=document.getElementById('tcTo')?.value||'USD';
+  const usd=parseFloat(document.getElementById('rUSD')?.textContent||'5.45');
+  const eur=parseFloat(document.getElementById('rEUR')?.textContent||'5.85');
+  const rates={BRL:1,USD:usd,EUR:eur};
+  const result=amt*(rates[from]/rates[to]);
+  const el=document.getElementById('tcResult');
+  if(el)el.textContent=to+' '+result.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+function calcValuation(){
+  const rev=parseFloat((document.getElementById('tvRev')?.value||'0').replace(/\./g,'').replace(',','.'))||0;
+  const mult=parseFloat(document.getElementById('tvMult')?.value)||0;
+  const ev=rev*mult;
+  const el=document.getElementById('tvResult');
+  if(el)el.textContent=ev>0?'EV estimado: US$ '+ev.toLocaleString('pt-BR',{maximumFractionDigits:0}):'—';
+}
+function calcPosition(){
+  const brl=parseFloat((document.getElementById('tpBRL')?.value||'0').replace(/\./g,'').replace(',','.'))||0;
+  const usdRate=parseFloat(document.getElementById('rUSD')?.textContent||'5.45');
+  const fee=tpType==='compra'?0.02:0.01;
+  const feeBRL=brl*fee;
+  const usdExp=(brl-feeBRL)/usdRate;
+  const el=document.getElementById('tpResult');
+  if(el&&brl>0)el.innerHTML='Exposição: <b>US$ '+usdExp.toLocaleString('pt-BR',{maximumFractionDigits:0})+'</b><br><span style="color:var(--faint);font-size:12px">Fee '+(fee*100)+'%: R$ '+feeBRL.toLocaleString('pt-BR',{maximumFractionDigits:0})+'</span>';
+  else if(el)el.textContent='—';
+}
+function calcIDA(){
+  const round=parseFloat((document.getElementById('idaRound')?.value||'0').replace(/\./g,''))||0;
+  const entry=parseFloat((document.getElementById('idaEntry')?.value||'0').replace(/\./g,''))||0;
+  const el=document.getElementById('idaResult');
+  if(el&&round>0&&entry>0){
+    const ida=((entry/round)-1)*100;
+    const col=ida<0?'var(--up)':'var(--dn)';
+    el.innerHTML='IDA: <b style="color:'+col+'">'+(ida>=0?'+':'')+ida.toFixed(2)+'%</b><br><span style="color:var(--faint);font-size:12px">'+(ida<0?'Desconto':'Ágio')+' vs. última rodada</span>';
+  }else if(el)el.textContent='—';
+}
+
 applyRole();
+updateWlBadge();
 
 // ─── PWA Service Worker ───────────────────────────
 if('serviceWorker' in navigator){
