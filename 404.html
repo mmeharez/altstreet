@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concorso</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+html,body{height:100%;margin:0;background:#16302A;color:#F4F0E6;
+  font-family:Georgia,'Times New Roman',serif;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:24px;-webkit-text-size-adjust:100%}
+p{font-style:italic;font-size:1.1rem;margin:0 0 26px}
+a{color:#D9BE86;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;border-bottom:1px solid rgba(217,190,134,.5);padding-bottom:3px}
+</style></head><body><div>
+<p>Esta página não existe.</p>
+<a id="v" href="./">Voltar ao Concorso</a>
+<script>
+// em usuario.github.io/repo/ a raiz do site e o primeiro segmento do caminho
+var base='/';
+if(location.hostname.endsWith('github.io')){
+  var seg=location.pathname.split('/').filter(Boolean);
+  if(seg.length) base='/'+seg[0]+'/';
+}
+document.getElementById('v').href=base;
+setTimeout(function(){ location.replace(base); }, 2500);
+</script>
+</div></body></html>
